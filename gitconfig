@@ -1,0 +1,65 @@
+[user]
+	name = Quan Minh Pham
+	email = quanpm.mta@gmail.com
+[alias]
+	st = status -sb
+	ci = commit
+	all = commit -am
+	br = branch
+	co = checkout
+	di = diff
+	dic = diff --cached
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	# Show files ignored by git:
+	ign = ls-files -o -i --exclude-standard
+
+	shoot = push origin --delete
+	unstage = reset HEAD --
+	prev = checkout -
+	discard = checkout --
+	reauthor = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author=$2\" $1' --
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[core]
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = vim
+	quotepath = false
+	excludesfile = /Users/macintoshhd/.gitignore
+[credential]
+	helper = osxkeychain
+[github]
+	user = Quan Minh Pham
+[mergetool]
+	keepBackup = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = current
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[includeIf "gitdir:~/cyberlitmus/"]
+  path = .gitconfig-cyberlitmus
+[includeIf "gitdir:~/savvycom/"]
+  path = .gitconfig-savvycom
+[includeIf "gitdir:~/ecom/"]
+  path = .gitconfig-savvycom
+[includeIf "gitdir:~/siriustech/"]
+  path = .gitconfig-siriustech
+[url "ssh://git@git.siriustech.internal:8022"]
+	insteadOf = https://gitlab.local
+[url "git@git.savvycom.vn:"]
+	insteadOf = https://git.savvycom.vn/
