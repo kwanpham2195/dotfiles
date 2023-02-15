@@ -21,6 +21,7 @@
 	prev = checkout -
 	discard = checkout --
 	reauthor = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author=$2\" $1' --
+  cane = commit --amend --no-edit
 [color]
 	ui = auto
 [color "branch"]
@@ -54,8 +55,6 @@
 [includeIf "gitdir:~/cyberlitmus/"]
   path = .gitconfig-cyberlitmus
 [includeIf "gitdir:~/savvycom/"]
-  path = .gitconfig-savvycom
-[includeIf "gitdir:~/ecom/"]
   path = .gitconfig-savvycom
 [includeIf "gitdir:~/siriustech/"]
   path = .gitconfig-siriustech
