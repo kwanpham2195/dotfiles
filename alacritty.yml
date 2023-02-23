@@ -1,7 +1,7 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 import:
   # - "/Users/macintoshhd/.config/alacritty/color.yml"
-  - "/Users/macintoshhd/.config/alacritty/dracula.yml"
+  - "~/.config/alacritty/dracula.yml"
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -35,7 +35,6 @@ window:
 
   dynamic_title: true
 
-
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
   decorations: full
@@ -56,42 +55,37 @@ scrolling:
   multiplier: 3
 
 # Font configuration (changes require restart)
-font:
-  # The normal (roman) font face to use.
-  normal:
-    family: Hack Nerd Font
-    style: Regular
-
-  # The bold font face
-  bold:
-    family: Hack Nerd Font
-    style: Bold
-
-  # The italic font face
-  italic:
-    family: Hack Nerd Font
-    style: Regular Italic
-
-  # Point size of the font
-  size: 14.0
-
-  # Offset is the extra space around each character. offset.y can be thought of
-  # as modifying the linespacing, and offset.x as modifying the letter spacing.
-  offset:
-    x: 0
-    y: 0
-
-  # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increase the x offset to move the glyph to
-  # the right, increase the y offset to move the glyph upward.
-  glyph_offset:
-    x: 0
-    y: 0
-
-  # OS X only: use thin stroke font rendering. Thin strokes are suitable
-  # for retina displays, but for non-retina you probably want this set to
-  # false.
-  use_thin_strokes: true
+# font:
+#   # The normal (roman) font face to use.
+#   normal:
+#     family: Hack Nerd Font
+#     style: Regular
+#
+#   # The bold font face
+#   bold:
+#     family: Hack Nerd Font
+#     style: Bold
+#
+#   # The italic font face
+#   italic:
+#     family: Hack Nerd Font
+#     style: Regular Italic
+#
+#   # Point size of the font
+#   size: 14.0
+#
+#   # Offset is the extra space around each character. offset.y can be thought of
+#   # as modifying the linespacing, and offset.x as modifying the letter spacing.
+#   offset:
+#     x: 0
+#     y: 0
+#
+#   # Glyph offset determines the locations of the glyphs within their cells with
+#   # the default being at the bottom. Increase the x offset to move the glyph to
+#   # the right, increase the y offset to move the glyph upward.
+#   glyph_offset:
+#     x: 0
+#     y: 0
 
 debug:
   # Should display the render timer
@@ -154,7 +148,7 @@ mouse:
   hide_when_typing: true
 
 selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 
   # When set to `true`, selected text will be copied to both the primary and
   # the selection clipboard. Otherwise, it will only be copied to the selection
@@ -173,7 +167,6 @@ cursor:
 
 # Live config reload (changes require restart)
 live_config_reload: true
-
 # Shell
 #
 # You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
@@ -192,7 +185,6 @@ live_config_reload: true
 #     - -D
 #     - -s
 #     - main
-
 
 # Key bindings
 #
