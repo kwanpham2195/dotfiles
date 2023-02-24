@@ -1,5 +1,4 @@
-dotfiles
-========
+# dotfiles
 
 My personal dotfiles.
 
@@ -24,4 +23,7 @@ chsh -s /usr/local/bin/fish
 
 # install tmux plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Install nvim
+cd into nvim and run install.sh
 ```

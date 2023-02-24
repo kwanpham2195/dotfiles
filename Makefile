@@ -21,7 +21,6 @@ clean:
 	rm -f ~/.config/alacritty/dracula.yml
 	rm -f ~/.config/fish/config.fish
 	rm -f ~/.config/fish/functions/
-	rm -f ~/.config/nvim/
 	rm -f ~/.tmux.conf
 	rm -f ~/.tigrc
 	rm -f ~/.gitconfig

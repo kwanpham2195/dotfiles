@@ -25,12 +25,9 @@ set fish_greeting ""
 # https://github.com/fish-shell/fish-shell/issues/6270
 function __fish_describe_command; end
 
-# brew install jump, https://github.com/gsamokovarov/jump
-status --is-interactive; and source (jump shell fish | psub)
-
 # Senstive functions which are not pushed to Github
 # It contains work related stuff, some functions, aliases etc...
-source ~/.private.fish
+# source ~/.private.fish
 
 set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths

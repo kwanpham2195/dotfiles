@@ -4,7 +4,7 @@ set -ga terminal-overrides ",xterm-256color:Tc"
 # Default terminal is 256 colors
 set -g default-terminal "screen-256color"
 
-set-environment -g PATH "/usr/local/bin:/bin:/usr/bin"
+set-environment -g PATH "/usr/local/bin:/bin:/usr/bin:/home/linuxbrew/.linuxbrew/bin"
 
 set-option -g default-shell /usr/bin/fish
 
