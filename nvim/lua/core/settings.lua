@@ -1,8 +1,8 @@
 local M = {}
 
--- theme: nightfox, tokyonight, tundra; default is catppuccin
+-- theme: nightfox, tokyonight, tundra, kanagawa, oxocarbon; default is catppuccin
 -- refer to the themes settings file for different styles
-M.theme = ""
+M.theme = "tokyonight"
 -- Toggle global status line
 M.global_statusline = true
 -- use rg instead of grep
@@ -19,16 +19,8 @@ M.showtabline = 1
 M.list = false
 -- which list chars to schow
 M.listchars = "eol:¬,tab:>·,trail:~,extends:>,precedes:<"
--- enable PackerSync on plugins.lua save
-M.packer_auto_sync = false
--- Disable integration of Neovim's statusline in your Tmux status
--- See https://github.com/vimpostor/vim-tpipeline#installation
-M.disable_tmux_statusline_integration = true
--- Disable https://github.com/norcalli/nvim-colorizer.lua
--- due to causing lags with live_grep in some circumstances
-M.disable_colorizer = false
 -- Noice heavily changes the Neovim UI ...
-M.disable_noice = true
+M.enable_noice = true
 -- Disable winbar with nvim-navic location
 M.disable_winbar = false
 -- Number of recent files shown in dashboard
@@ -52,7 +44,6 @@ M.treesitter_ensure_installed = {
   "javascript",
   "json",
   "kotlin",
-  "latex",
   "ledger",
   "lua",
   "markdown",
@@ -60,9 +51,99 @@ M.treesitter_ensure_installed = {
   "query",
   "python",
   "regex",
+  "terraform",
   "toml",
   "vim",
   "yaml",
+}
+
+-- LSPs that should be installed by Mason-lspconfig
+M.lsp_servers = {
+  "bashls",
+  "dockerls",
+  "jsonls",
+  "ltex",
+  "marksman",
+  "pyright",
+  "lua_ls",
+  "terraformls",
+  "texlab",
+  "tsserver",
+  "yamlls",
+}
+
+-- Tools that should be installed by Mason
+M.tools = {
+  -- Formatter
+  "black",
+  "prettier",
+  "stylua",
+  "shfmt",
+  -- Linter
+  "eslint_d",
+  "shellcheck",
+  "tflint",
+  "yamllint",
+  "ruff",
+  -- DAP
+  "debugpy",
+}
+
+-- enable greping in hidden files
+M.telescope_grep_hidden = true
+
+-- which patterns to ignore in file switcher
+M.telescope_file_ignore_patterns = {
+  "%.7z",
+  "%.JPEG",
+  "%.JPG",
+  "%.MOV",
+  "%.RAF",
+  "%.burp",
+  "%.bz2",
+  "%.cache",
+  "%.class",
+  "%.dll",
+  "%.docx",
+  "%.dylib",
+  "%.epub",
+  "%.exe",
+  "%.flac",
+  "%.ico",
+  "%.ipynb",
+  "%.jar",
+  "%.jpeg",
+  "%.jpg",
+  "%.lock",
+  "%.mkv",
+  "%.mov",
+  "%.mp4",
+  "%.otf",
+  "%.pdb",
+  "%.pdf",
+  "%.png",
+  "%.rar",
+  "%.sqlite3",
+  "%.svg",
+  "%.tar",
+  "%.tar.gz",
+  "%.ttf",
+  "%.webp",
+  "%.zip",
+  ".git/",
+  ".gradle/",
+  ".idea/",
+  ".settings/",
+  ".vale/",
+  ".vscode/",
+  "__pycache__/*",
+  "build/",
+  "env/",
+  "gradle/",
+  "node_modules/",
+  "smalljre_*/*",
+  "target/",
+  "vendor/*",
 }
 
 return M

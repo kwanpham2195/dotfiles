@@ -1,7 +1,7 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 import:
   # - "/Users/macintoshhd/.config/alacritty/color.yml"
-  - "/Users/macintoshhd/.config/alacritty/dracula.yml"
+  - '/Users/macintoshhd/.config/alacritty/dracula.yml'
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -34,7 +34,6 @@ window:
   dynamic_padding: false
 
   dynamic_title: true
-
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
@@ -154,7 +153,7 @@ mouse:
   hide_when_typing: true
 
 selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 
   # When set to `true`, selected text will be copied to both the primary and
   # the selection clipboard. Otherwise, it will only be copied to the selection
@@ -184,16 +183,14 @@ live_config_reload: true
 #   args:
 #     - --login
 #
-# shell:
-#   program: /usr/local/bin/tmux
-#   args:
-#     - new-session
-#     - -A
-#     - -D
-#     - -s
-#     - main
-
-
+shell:
+  program: /usr/local/bin/tmux
+  args:
+    - new-session
+    - -A
+    - -D
+    - -s
+    - main
 # Key bindings
 #
 # Each binding is defined as an object with some properties. Most of the
