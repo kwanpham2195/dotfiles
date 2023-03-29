@@ -1,8 +1,8 @@
 local M = {}
 
--- theme: nightfox, tokyonight, tundra, kanagawa; default is catppuccin
+-- theme: nightfox, tokyonight, tundra, kanagawa, oxocarbon; default is catppuccin
 -- refer to the themes settings file for different styles
-M.theme = "nightfox"
+M.theme = "tokyonight"
 -- Toggle global status line
 M.global_statusline = true
 -- use rg instead of grep
@@ -55,26 +55,25 @@ M.treesitter_ensure_installed = {
   "toml",
   "vim",
   "yaml",
-  "vue",
 }
 
--- Tools that should be installed by Mason(-tool-install)
-M.mason_tool_installer_ensure_installed = {
-  -- LSP
-  "bash-language-server",
-  "dockerfile-language-server",
-  "json-lsp",
+-- LSPs that should be installed by Mason-lspconfig
+M.lsp_servers = {
+  "bashls",
+  "dockerls",
+  "jsonls",
+  "ltex",
   "marksman",
-  "typescript-language-server",
-  "texlab",
-  "ltex-ls",
-  "lua-language-server",
   "pyright",
-  "terraform-ls",
-  "yaml-language-server",
-  "kotlin-language-server",
-  "vue-language-server",
-  "vetur-vls",
+  "lua_ls",
+  "terraformls",
+  "texlab",
+  "tsserver",
+  "yamlls",
+}
+
+-- Tools that should be installed by Mason
+M.tools = {
   -- Formatter
   "black",
   "prettier",
@@ -85,6 +84,7 @@ M.mason_tool_installer_ensure_installed = {
   "shellcheck",
   "tflint",
   "yamllint",
+  "ruff",
   -- DAP
   "debugpy",
 }
