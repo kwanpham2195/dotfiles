@@ -55,6 +55,7 @@ M.treesitter_ensure_installed = {
   "toml",
   "vim",
   "yaml",
+  "vue",
 }
 
 -- Tools that should be installed by Mason(-tool-install)
@@ -72,6 +73,8 @@ M.mason_tool_installer_ensure_installed = {
   "terraform-ls",
   "yaml-language-server",
   "kotlin-language-server",
+  "vue-language-server",
+  "vetur-vls",
   -- Formatter
   "black",
   "prettier",
